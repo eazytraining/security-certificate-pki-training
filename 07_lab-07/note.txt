@@ -1,4 +1,4 @@
-sudo yum install -y nginx git
+sudo aptinstall -y nginx git
 
 sudo systemctl start nginx
 sudo systemctl enable nginx
