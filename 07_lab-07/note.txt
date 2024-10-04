@@ -1,4 +1,4 @@
-sudo aptinstall -y nginx git
+sudo apt install -y nginx git
 
 sudo systemctl start nginx
 sudo systemctl enable nginx
