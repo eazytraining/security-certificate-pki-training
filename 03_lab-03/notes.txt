@@ -16,11 +16,11 @@ openssl rsa -in private.pem -pubout > public.pem
 openssl rsa -in public.pem -pubin -text -noout
 
 # encrypt file
-openssl rsautl -encrypt -inkey public.pem  -pubin -in rh.txt -out rh.txt.enc
+openssl pkeyutl -encrypt -inkey public.pem -pubin -in rh.txt -out rh.txt.enc
 cat rh.txt.enc
 
 # decrypt file
-openssl rsautl -decrypt -inkey private.pem -in rh.txt.enc > rh.txt.dec
+openssl pkeyutl -decrypt -inkey private.pem -in rh.txt.enc > rh.txt.dec
 # passphrase = iformtech
 cat rh.txt.dec
 
